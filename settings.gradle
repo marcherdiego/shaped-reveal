@@ -1,0 +1,3 @@
+rootProject.name = "Shaped Reveal"
+include ':app'
+include ':core'
