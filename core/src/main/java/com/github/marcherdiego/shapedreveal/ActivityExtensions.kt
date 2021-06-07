@@ -5,6 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 
 fun Activity.revealActivity(intent: Intent, bundle: Bundle? = null) {
-    startActivity(intent, bundle)
-    startActivity(Intent(this, RevealActivity::class.java))
+    startActivity(
+        Intent(this, RevealActivity::class.java).apply {
+            putExtra(RevealActivity.TARGET_INTENT, intent)
+            putExtra(RevealActivity.TARGET_BUNDLE, bundle)
+        }
+    )
+    overridePendingTransition(0, 0)
 }

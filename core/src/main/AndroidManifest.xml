@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.marcherdiego.shapedreveal">
 
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    
     <application>
         <activity
             android:name=".RevealActivity"
+            android:launchMode="singleInstance"
             android:theme="@style/Theme.Transparent"/>
     </application>
 
